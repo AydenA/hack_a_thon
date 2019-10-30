@@ -132,7 +132,7 @@ public class Card {
 	
 	public void setPicture(String picture) {
 		
-		this.id = id;
+		this.picture = picture;
 	}	
 	
 }
