@@ -1,7 +1,8 @@
 package com.wildcodeschool.Hackofthon;
 
+import java.util.*;
 
-public class Card() {
+public class Card {
 	
 	private int id;
 	private String name;
@@ -34,13 +35,13 @@ public class Card() {
 	}
 	
 	
-	public int getName() {
+	public String getName() {
 			
 		return this.name;
 	}
 	
 	
-	public String getlevel() {
+	public String getLevel() {
 		
 		return this.level;
 	}
@@ -78,7 +79,7 @@ public class Card() {
 	
 	public String getPicture() {
 		
-		return this.getPicture;
+		return this.picture;
 	}
 	
 	
@@ -88,7 +89,7 @@ public class Card() {
 	}
 	
 	
-	public void setName(int name) {
+	public void setName(String name) {
 		
 		this.name = name;
 	}
