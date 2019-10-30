@@ -1,3 +1,5 @@
+package com.wildcodeschool.Hackofthon.models;
+
 import java.lang.Math;
 import java.util.ArrayList;
 
@@ -18,14 +20,14 @@ public class HearthOfThon {
     }
 
     private static int takeHit(Card card1, Card card2) {
-        int damageDeal = card2.getAttack();
-        card1.setLife((card1.getLife() + card1.getDefense()) - card2.getAttack());
+        int damageDeal = card2.getAttack() + randomInt(10);
+        card1.setLife((card1.getLife() + card1.getDefense()) - damageDeal);
         return damageDeal;
     }
 
     private static String displayStatusBattle( boolean battleResult) {
 			
-		if battleResult
+		if (battleResult)
 			return " Félicitation vous avez remporté la victoire !!";
 		return " Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
 	}
@@ -75,7 +77,7 @@ public class HearthOfThon {
         return result;
     }
 
-    private static int random(int variation) {
+    private static int randomInt(int variation) {
         return (int) (Math.random() * variation - (variation * 2));
     }
 
