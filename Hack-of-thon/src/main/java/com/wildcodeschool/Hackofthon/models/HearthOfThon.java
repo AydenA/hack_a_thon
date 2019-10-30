@@ -3,10 +3,11 @@ import java.util.ArrayList;
 
 public class HearthOfThon {
 
-    private static boolean battleResult; //false par déf
-    private static String[] ranks = new String[] {"Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite", "Conqueror", "Champion", "Master", "Greatest", "Java > PHP"};
+    private static boolean battleResult; // false par déf
+    private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
+            "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         launchGame();
 
@@ -15,17 +16,21 @@ public class HearthOfThon {
     private static void launchGame() {
 
     }
-    
-    public class Fight {
-    	
-    	private static int takeHit(Card card1, Card card2) {
-    		int damageDeal= card2.getAttack();
-    		card1.setLife((card1.getLife()+card1.getDefense())-card2.getAttack());
-    		return damageDeal;	
-    	}
+
+    private static int takeHit(Card card1, Card card2) {
+        int damageDeal = card2.getAttack();
+        card1.setLife((card1.getLife() + card1.getDefense()) - card2.getAttack());
+        return damageDeal;
     }
 
-    private static String xpGain (double levelJoueur, double levelAdversaire) {
+    private static String displayStatusBattle( boolean battleResult) {
+			
+		if battleResult
+			return " Félicitation vous avez remporté la victoire !!";
+		return " Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
+	}
+
+    private static String xpGain(double levelJoueur, double levelAdversaire) {
 
         double levelDiff = levelJoueur - levelAdversaire;
         if (levelDiff > 10) {
@@ -59,19 +64,19 @@ public class HearthOfThon {
 
     }
 
-    private static void xpAdd (double xp) {
+    private static void xpAdd(double xp) {
         Player.setExperience(Player.getExperience() + xp);
     }
 
-    private static String uprank () {
+    private static String uprank() {
         String rank = ranks[(int) (Player.getExperience() / 10)];
         Player.setRank(rank);
         String result = "Votre rang : " + rank;
         return result;
     }
 
-	private static int random (int variation) {
-		return (int) (Math.random() * variation - (variation * 2));
-	}
+    private static int random(int variation) {
+        return (int) (Math.random() * variation - (variation * 2));
+    }
 
 }
