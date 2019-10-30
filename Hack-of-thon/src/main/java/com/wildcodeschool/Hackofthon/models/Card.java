@@ -1,7 +1,5 @@
 package com.wildcodeschool.Hackofthon.models;
 
-import java.util.*;
-
 public class Card {
 	
 	private int id;

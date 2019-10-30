@@ -14,35 +14,17 @@ public class HearthOfThon {
             "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
 
     public static void main(String[] args) {
-
+    	Card[] globalDeck = Deck.createCards();
+    	System.out.println(globalDeck);
         isPlaying = true;
-        launchGame();
-
     }
 
 
     private static void launchGame() {
 
-    	//TODO
+    	
 
     }
-    
-
-    private static void deckShuffle() {
-        ArrayList<Card>  mydeck = new ArrayList<Card>(); 
-        mydeck.add(card1);
-        mydeck.add(card2);
-        mydeck.add(card3);
-        mydeck.add(card4);
-        mydeck.add(card5);
-        mydeck.add(card6);
-        mydeck.add(card7);
-        mydeck.add(card8);
-        mydeck.add(card9);
-        mydeck.add(card10);
-        Collections.shuffle(mydeck); 
-    } 
-
 
     private static int takeHit(Card card1, Card card2) {
         int damageDeal = card2.getAttack() + randomInt(10);
