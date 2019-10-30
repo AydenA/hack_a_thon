@@ -6,19 +6,14 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class HearthOfThon {
-
+	
+	private static Card[] globalDeck = Deck.createCards();
     private static String displayMessage;
     private static boolean isPlaying;
     private static Player player1 = new Player(1, "Michel");
     private static boolean battleResult; // false par déf
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
             "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
-
-    public static void main(String[] args) {
-    	Card[] globalDeck = Deck.createCards();
-    	Card[] globalDeckShuffle = cardShuffle( globalDeck);
-    }
-
 
     private static int takeHit(Card card1, Card card2) {
         int damageDeal = card2.getAttack() + randomInt(10);
@@ -30,20 +25,20 @@ public class HearthOfThon {
     }
 
     
-    private static Card[] cardShuffle (Card[] deck) {
-		List<Card> listCard = Arrays.asList(deck);
+    private static Card[] cardShuffle () {
+		List<Card> listCard = Arrays.asList(globalDeck);
 		Collections.shuffle(listCard);
-		return listCard.toArray(deck);
+		return listCard.toArray(globalDeck);
     }
     
     
     private static Card[] createPlayerDeck () {
-    	Card[] playerDeck = new Card[] {deck[0], deck[1], deck[2], deck[3], deck[4], deck[5], deck[6], deck[7], deck[8], deck[9]};
+    	Card[] playerDeck = new Card[] {globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
     	return playerDeck;
     }
     
-    private static Card[] createOrdiDeck (Card[] deck) {
-    	Card[] ordiDeck = new Card[] {deck[10], deck[11], deck[12], deck[13], deck[14], deck[15], deck[16], deck[17], deck[18]};
+    private static Card[] createOrdiDeck () {
+    	Card[] ordiDeck = new Card[] {globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
     	return ordiDeck;
     }
 
@@ -91,11 +86,6 @@ public class HearthOfThon {
     }
     
 
-    private static void xpAdd(double xp) {
-        player1.setExperience(player1.getExperience() + xp);
-    }
-    
-
     private static String uprank() {
         String rank = ranks[(int) (player1.getExperience() / 10)];
         player1.setRank(rank);
@@ -103,7 +93,12 @@ public class HearthOfThon {
         return result;
     }
     
-
+    
+    private static void xpAdd(double xp) {
+        player1.setExperience(player1.getExperience() + xp);
+    }
+    
+    
     private static int randomInt(int variation) {
         return (int) (Math.random() * variation - (variation * 2));
     }
