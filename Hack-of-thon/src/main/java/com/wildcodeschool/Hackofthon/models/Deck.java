@@ -1,4 +1,4 @@
-package com.wildcodeschool.Hackofthon;
+package com.wildcodeschool.Hackofthon.models;
 
 import java.io.IOException;
 import java.util.*;
