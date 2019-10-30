@@ -1,7 +1,8 @@
 package com.wildcodeschool.Hackofthon.models;
 
 import java.lang.Math;
-import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class HearthOfThon {
@@ -15,16 +16,9 @@ public class HearthOfThon {
 
     public static void main(String[] args) {
     	Card[] globalDeck = Deck.createCards();
-    	System.out.println(globalDeck);
-        isPlaying = true;
+    	Card[] globalDeckShuffle = cardShuffle( globalDeck);
     }
 
-
-    private static void launchGame() {
-
-    	
-
-    }
 
     private static int takeHit(Card card1, Card card2) {
         int damageDeal = card2.getAttack() + randomInt(10);
@@ -33,6 +27,24 @@ public class HearthOfThon {
             card1.setLife(0);
         }
         return damageDeal;
+    }
+
+    
+    private static Card[] cardShuffle (Card[] deck) {
+		List<Card> listCard = Arrays.asList(deck);
+		Collections.shuffle(listCard);
+		return listCard.toArray(deck);
+    }
+    
+    
+    private static Card[] createPlayerDeck (Card[] deck) {
+    	Card[] playerDeck = new Card[] {deck[0], deck[1], deck[2], deck[3], deck[4], deck[5], deck[6], deck[7], deck[8], deck[9]};
+    	return playerDeck;
+    }
+    
+    private static Card[] createOrdiDeck (Card[] deck) {
+    	Card[] ordiDeck = new Card[] {deck[10], deck[11], deck[12], deck[13], deck[14], deck[15], deck[16], deck[17], deck[18]};
+    	return ordiDeck;
     }
 
     
@@ -96,8 +108,4 @@ public class HearthOfThon {
         return (int) (Math.random() * variation - (variation * 2));
     }
     
-    
-    private static void replayGame() {
-    	launchGame();
-    }
 }
