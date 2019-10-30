@@ -1,10 +1,13 @@
 package com.wildcodeschool.Hackofthon.models;
 
 import java.lang.Math;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class HearthOfThon {
 
     private static String displayMessage;
+    private static boolean isPlaying;
     private static Player player1 = new Player(1, "Michel");
     private static boolean battleResult; // false par déf
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
@@ -12,26 +15,52 @@ public class HearthOfThon {
 
     public static void main(String[] args) {
 
+        isPlaying = true;
         launchGame();
 
     }
 
+
     private static void launchGame() {
 
+    	//TODO
+
     }
+    
+
+    private static void deckShuffle() {
+        ArrayList<Card>  mydeck = new ArrayList<Card>(); 
+        mydeck.add(card1);
+        mydeck.add(card2);
+        mydeck.add(card3);
+        mydeck.add(card4);
+        mydeck.add(card5);
+        mydeck.add(card6);
+        mydeck.add(card7);
+        mydeck.add(card8);
+        mydeck.add(card9);
+        mydeck.add(card10);
+        Collections.shuffle(mydeck); 
+    } 
+
 
     private static int takeHit(Card card1, Card card2) {
         int damageDeal = card2.getAttack() + randomInt(10);
         card1.setLife((card1.getLife() + card1.getDefense()) - damageDeal);
+        if (card1.getLife() < 0) {
+            card1.setLife(0);
+        }
         return damageDeal;
     }
 
+    
     private static String displayStatusBattle( boolean battleResult) {
 			
 		if (battleResult)
 			return " Félicitation vous avez remporté la victoire !!";
 		return " Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
 	}
+    
 
     private static String xpGain(double levelJoueur, double levelAdversaire) {
 
@@ -66,10 +95,12 @@ public class HearthOfThon {
         }
 
     }
+    
 
     private static void xpAdd(double xp) {
         player1.setExperience(player1.getExperience() + xp);
     }
+    
 
     private static String uprank() {
         String rank = ranks[(int) (player1.getExperience() / 10)];
@@ -77,9 +108,14 @@ public class HearthOfThon {
         String result = "Votre rang : " + rank;
         return result;
     }
+    
 
     private static int randomInt(int variation) {
         return (int) (Math.random() * variation - (variation * 2));
     }
-
+    
+    
+    private static void replayGame() {
+    	launchGame();
+    }
 }
