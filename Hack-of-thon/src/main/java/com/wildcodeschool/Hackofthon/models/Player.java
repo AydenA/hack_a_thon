@@ -6,16 +6,14 @@ public class Player {
 	
 	//Attributs
 	private ArrayList<Card> hand;
-	private int experience;
+	private double experience;
 	private String name;
 	private String rank;
 	
 	//constructeurs
-	public void player(ArrayList<Card> hand , int experience, String name, String rank) {
-		this.hand = hand;
+	public Player(double experience, String name) {
 		this.experience = experience;
 		this.name = name;
-		this.rank = rank;
 	}
 	
 	//getter et setter
@@ -28,11 +26,11 @@ public class Player {
 		this.hand = hand;
 	}
 	
-	public int getExperience() {
+	public double getExperience() {
 		return this.experience;
 	}
 	
-	public void setExperience(int experience) {
+	public void setExperience(double experience) {
 		this.experience = experience;
 	}
 	

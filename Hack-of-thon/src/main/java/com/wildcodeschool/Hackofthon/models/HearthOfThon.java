@@ -1,10 +1,11 @@
 package com.wildcodeschool.Hackofthon.models;
 
 import java.lang.Math;
-import java.util.ArrayList;
 
 public class HearthOfThon {
 
+    private static String displayMessage;
+    private static Player player1 = new Player(1, "Michel");
     private static boolean battleResult; // false par déf
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
             "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
@@ -67,12 +68,12 @@ public class HearthOfThon {
     }
 
     private static void xpAdd(double xp) {
-        Player.setExperience(Player.getExperience() + xp);
+        player1.setExperience(player1.getExperience() + xp);
     }
 
     private static String uprank() {
-        String rank = ranks[(int) (Player.getExperience() / 10)];
-        Player.setRank(rank);
+        String rank = ranks[(int) (player1.getExperience() / 10)];
+        player1.setRank(rank);
         String result = "Votre rang : " + rank;
         return result;
     }
