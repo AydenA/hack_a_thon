@@ -37,7 +37,7 @@ public class HearthOfThon {
     }
     
     
-    private static Card[] createPlayerDeck (Card[] deck) {
+    private static Card[] createPlayerDeck () {
     	Card[] playerDeck = new Card[] {deck[0], deck[1], deck[2], deck[3], deck[4], deck[5], deck[6], deck[7], deck[8], deck[9]};
     	return playerDeck;
     }
