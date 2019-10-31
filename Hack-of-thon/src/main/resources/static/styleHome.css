@@ -332,3 +332,101 @@ body{
 	visibility:visible;
 }
 
+
+/* card1 */
+
+.pCard{
+	display:flex;
+	position:fixed;
+	right:0;
+	top:40%;
+	flex-direction:column;
+	align-items:center;
+	justify-content:space-between;
+	background-color:rgba(0,0,0,0.6);
+	background-size:cover;
+	background-position: 50% 0px;
+	border-radius:20px;
+	width:8vw;
+	height:32vh;
+	z-index:1;
+	visibility:hidden;
+	text-align:center;
+	overflow:hidden;
+}
+.pCard1{
+		animation: 2s ease-out 0s 1 slideInFromLeft;
+		
+}
+.pCard2{
+		animation: 2s ease-out 0s 1 slideInFromLeft;
+		animation-delay: 2s;
+}
+.pCard3{
+		animation: 2s ease-out 0s 1 slideInFromLeft;
+		animation-delay: 4s;
+}
+.pCard4{
+		animation: 2s ease-out 0s 1 slideInFromLeft;
+		animation-delay: 6s;
+}
+.pCard5{
+		animation: 2s ease-out 0s 1 slideInFromLeft;
+		animation-delay: 8s;
+}
+.pCard img{
+	width:100%;
+
+	
+}
+.pCard h1{
+ font-size:1.5em;
+ color:white;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+  	visibility: visible;
+    transform: translateX(+100%);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  70% {
+    transform: translateX(0);
+  }
+  100% {
+  	visibility: hidden;
+    transform: translateX(+100%);
+  }
+}
+
+.pCard0{
+	color:white;
+	font-size:2rem;
+	right:5%;
+	top:30%;
+	align-self:flex-end;
+	margin-top:10px;
+	margin-right:10px;
+	animation: 10s fadeout;
+	visibility:hidden;
+}
+
+@keyframes fadeout {
+  0% {
+  	visibility: visible;
+  	transform:translateX(0);
+  }
+  99% {
+  	visibility: visible;
+  	transform:translateX(0);
+  }
+  100% {
+  	transform:translateX(+200%);
+  	display:none;
+  }
+}
