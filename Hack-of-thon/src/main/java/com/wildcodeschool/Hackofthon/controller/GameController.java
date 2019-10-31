@@ -28,4 +28,15 @@ public class GameController {
 		model.addAttribute("computerDeck", computerDeck);
 		return "board";
 	}
+	
+	@GetMapping("/board2")
+	public String secondTurnController(Model model) {
+		Card[] playerDeck = HearthOfThon.createPlayerDeck();
+		Card[] computerDeck = HearthOfThon.createComputerDeck();
+		HearthOfThon.deckShuffle(playerDeck);
+		HearthOfThon.deckShuffle(computerDeck);
+		model.addAttribute("playerDeck", playerDeck);
+		model.addAttribute("computerDeck", computerDeck);
+		return "board2";
+	}
 }
