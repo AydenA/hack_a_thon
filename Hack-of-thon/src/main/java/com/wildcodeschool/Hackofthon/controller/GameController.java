@@ -21,7 +21,7 @@ public class GameController {
 	@GetMapping("/board")
 	public String firstTurnController(Model model) {
 		Card[] playerDeck = HearthOfThon.createPlayerDeck();
-		Card[] computerDeck = HearthOfThon.createOrdiDeck();
+		Card[] computerDeck = HearthOfThon.createComputerDeck();
 		HearthOfThon.deckShuffle(playerDeck);
 		HearthOfThon.deckShuffle(computerDeck);
 		model.addAttribute("playerDeck", playerDeck);
