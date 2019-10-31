@@ -7,6 +7,8 @@ import java.util.Collections;
 
 public class HearthOfThon {
 	
+	private static int playerLife = 0;
+	private static int computerLife = 0;
 	private static Card blankCard = new Card ();
 	private static Card[] globalDeck = Deck.createCards();
     private static Player player1 = new Player(1, "Michel");
@@ -16,16 +18,30 @@ public class HearthOfThon {
     public static Card[] createPlayerDeck () {
     	Card[] playerDeck = new Card[] {blankCard, globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
     	for (int i = 0; i < playerDeck.length; i++) {
-    		playerDeck[i].setLife(20 + randomVar(20));
+    		int lifePoints = 20 + randomVar(20);
+    		playerDeck[i].setLife(lifePoints);
+    		playerLife += lifePoints;
     	}
     	return playerDeck;
+    }
+    
+    
+    public static int getPlayerLife() {
+    	return playerLife;
+    }
+    
+    
+    public static int getComputerLife() {
+    	return computerLife;
     }
     
     
     public static Card[] createComputerDeck () {
     	Card[] computerDeck = new Card[] {blankCard, globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
     	for (int i = 0; i < computerDeck.length - 1; i++) {
-    		computerDeck[i].setLife(20 + randomVar(20));
+    		int lifePoints = 20 + randomVar(20);
+    		computerDeck[i].setLife(lifePoints);
+    		computerLife += lifePoints;
     	}
     	return computerDeck;
     }

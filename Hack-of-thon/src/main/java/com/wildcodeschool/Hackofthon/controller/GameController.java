@@ -3,8 +3,6 @@ package com.wildcodeschool.Hackofthon.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.wildcodeschool.Hackofthon.models.Card;
 import com.wildcodeschool.Hackofthon.models.HearthOfThon;
 
@@ -31,8 +29,6 @@ public class GameController {
 	public String secondTurnController(Model model) {
 		Card[] playerDeck = HearthOfThon.createPlayerDeck();
 		Card[] computerDeck = HearthOfThon.createComputerDeck();
-		HearthOfThon.deckShuffle(playerDeck);
-		HearthOfThon.deckShuffle(computerDeck);
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
 		return "board2";
