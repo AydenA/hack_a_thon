@@ -53,7 +53,7 @@ public class HearthOfThon {
     
     
     public static int takeHit(Card card1, Card card2) {
-        int damageDeal = card2.getAttack() + randomVar(10) - card1.getDefense()/2;
+        int damageDeal = card2.getAttack() + randomVar(10) - card1.getDefense()/4;
         int tempLife = card1.getLife();
         card1.setLife(card1.getLife() - damageDeal);
         if (card1.getLife() < 0) {
