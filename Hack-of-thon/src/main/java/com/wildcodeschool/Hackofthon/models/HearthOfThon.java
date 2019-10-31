@@ -14,9 +14,11 @@ public class HearthOfThon {
     private static Player player1 = new Player(1, "Michel");
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
             "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
-
+    private static Card[] computerDeck = new Card[9];
+    private static Card[] playerDeck = new Card[10];
+    
     public static Card[] createPlayerDeck () {
-    	Card[] playerDeck = new Card[] {blankCard, globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
+    	playerDeck = new Card[] {blankCard, globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
     	for (int i = 0; i < playerDeck.length; i++) {
     		int lifePoints = 20 + randomVar(20);
     		playerDeck[i].setLife(lifePoints);
@@ -37,7 +39,7 @@ public class HearthOfThon {
     
     
     public static Card[] createComputerDeck () {
-    	Card[] computerDeck = new Card[] {blankCard, globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
+    	computerDeck = new Card[] {blankCard, globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
     	for (int i = 0; i < computerDeck.length - 1; i++) {
     		int lifePoints = 20 + randomVar(20);
     		computerDeck[i].setLife(lifePoints);
@@ -47,12 +49,13 @@ public class HearthOfThon {
     }
     
     
-    private static int takeHit(Card card1, Card card2) {
+    public static int takeHit(Card card1, Card card2) {
         int damageDeal = card2.getAttack() + randomVar(10);
         card1.setLife((card1.getLife() + card1.getDefense()) - damageDeal);
         if (card1.getLife() < 0) {
             card1.setLife(0);
         }
+        System.out.print(card1.getLife());
         return damageDeal;
     }
     
@@ -122,4 +125,13 @@ public class HearthOfThon {
         return (int) (Math.random() * variation - (variation / 2));
     }
     
+    public static Card[] getComputerDeck() {
+    	return computerDeck;
+    }
+    
+    public static Card[] getPlayerDeck() {
+    	
+    	return playerDeck;
+    	
+    }
 }
