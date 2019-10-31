@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styleHome2.css">
+</head>
+<body>
+	<div class="console">
+		<p class="gamePhase" th:text ="${displayMessage}">
+	</div>
+	<div class = "computer">
+		<img src="/img/cp.png" alt="">
+		<div th:text ="|${computerLife} pv|" class="computerLife">100 PV</div>
+	</div>
+	<div class="computerPioche">
+		<div class ="piocheCard piocheCardComputer1"></div>
+		<div class ="piocheCard piocheCardComputer2"></div>
+		<div class ="piocheCard piocheCardComputer3"></div>
+		<div class ="piocheCard piocheCardComputer4"></div>
+		<div class ="piocheCard piocheCardComputer5"></div>
+		<div class ="piocheCard piocheCardComputer6"></div>
+		<div class ="piocheCard piocheCardComputer7"></div>
+		<div class ="piocheCard piocheCardComputer8"></div>
+		<div class ="piocheCard piocheCardComputer9"></div>
+		<div class ="piocheCard piocheCardComputer10"></div>
+	</div>
+	<div class = "computerBoard">
+		<div class= "card">
+			<figure>
+					<img class="overCard" th:src="${computerDeck[1].picture}">
+				</figure>
+		</div>
+		<div class= "card">
+			<figure>
+					<img class="overCard" th:src="${computerDeck[2].picture}">
+				</figure>
+		</div>
+		<div class= "card"> 
+			<figure>
+					<img class="overCard" th:src="${computerDeck[3].picture}">
+				</figure>
+		</div>
+		<div class= "card">
+			<figure>
+					<img class="overCard" th:src="${computerDeck[4].picture}">
+				</figure>
+		 </div>
+		<div class= "card">
+			<figure>
+					<img class="overCard" th:src="${computerDeck[5].picture}">
+				</figure>
+		</div>
+	</div>
+	<div class = "playerBoard">
+		<div class= "card card1">
+			<figure>
+					<img class="overCard" th:src="${playerDeck[1].picture}">
+					<figcaption class="buttonContainer">
+						<a class="button" href="/board2?idMonster=1">Attaquer</a>
+					</figcaption>
+				</figure>
+			<div class="boxDescription">
+				<img th:src="${playerDeck[1].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[1].name}" >Zombie Killer</h1>
+				<div class="informationTarget">
+					<p th:text = "|life : ${playerDeck[1].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[1].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[1].defense}|" class="informationTargetcharacteristic">defense : 5</p>
+				</div>
+				<p th:text = "${playerDeck[1].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+			</div>
+		</div>
+		<div class= "card card2">
+			<figure>
+					<img class="overCard" th:src="${playerDeck[2].picture}">
+					<figcaption class="buttonContainer">
+						<a class="button" href="/board2?idMonster=2">Attaquer</a>
+					</figcaption>
+				</figure>
+			<div class="boxDescription">
+				<img th:src="${playerDeck[2].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[2].name}" >Zombie Killer</h1>
+				<div class="informationTarget">
+					<p th:text = "|life : ${playerDeck[2].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[2].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[2].defense}|" class="informationTargetcharacteristic">defense : 5</p>
+				</div>
+				<p th:text = "${playerDeck[2].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+			</div>
+		</div>
+		<div class= "card card3">
+			<figure>
+					<img class="overCard" th:src="${playerDeck[3].picture}">
+					<figcaption class="buttonContainer">
+						<a class="button" href="/board2?idMonster=3">Attaquer</a>
+					</figcaption>
+				</figure>
+			<div class="boxDescription">
+				<img th:src="${playerDeck[3].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[3].name}" >Zombie Killer</h1>
+				<div class="informationTarget">
+					<p th:text = "|life : ${playerDeck[3].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[3].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[3].defense}|" class="informationTargetcharacteristic">defense : 5</p>
+				</div>
+				<p th:text = "${playerDeck[3].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+			</div>
+		</div>
+		<div class= "card card4">
+			<figure>
+					<img class="overCard" th:src="${playerDeck[4].picture}">
+					<figcaption class="buttonContainer">
+						<a class="button" href="/board2?idMonster=4">Attaquer</a>
+					</figcaption>
+				</figure>
+			<div class="boxDescription">
+				<img th:src="${playerDeck[4].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[4].name}" >Zombie Killer</h1>
+				<div class="informationTarget">
+					<p th:text = "|life : ${playerDeck[4].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[4].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[4].defense}|" class="informationTargetcharacteristic">defense : 5</p>
+				</div>
+				<p th:text = "${playerDeck[4].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+			</div>
+		</div>
+		<div class= "card card5">
+			<figure>
+					<img class="overCard" th:src="${playerDeck[5].picture}">
+					<figcaption class="buttonContainer">
+						<a class="button" href="/board2?idMonster=5">Attaquer</a>
+					</figcaption>
+				</figure>
+			<div class="boxDescription">
+				<img th:src="${playerDeck[5].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[5].name}" >Zombie Killer</h1>
+				<div class="informationTarget">
+					<p th:text = "|life : ${playerDeck[5].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[5].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[5].defense}|" class="informationTargetcharacteristic">defense : 5</p>
+				</div>
+				<p th:text = "${playerDeck[5].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class = "player">
+		<img src="/img/toppng.com-cute-monsters-1024x1024.png" alt="">
+		<div th:text ="|${playerLife} pv|" class="playerLife">100 PV</div>
+	</div>
+
+	<a href="#here" class="playerPioche" title="tirer une carte" id="here">
+		<div class ="piocheCard piocheCard1"></div>
+		<div class ="piocheCard piocheCard2"></div>
+		<div class ="piocheCard piocheCard3"></div>
+		<div class ="piocheCard piocheCard4"></div>
+		<div class ="piocheCard piocheCard5"></div>
+		<div class ="piocheCard piocheCard6"></div>
+		<div class ="piocheCard piocheCard7"></div>
+		<div class ="piocheCard piocheCard8"></div>
+		<div class ="piocheCard piocheCard9"></div>
+		<div class ="piocheCard piocheCard10"></div>
+		<div class=toShow>	
+			<p class=toShow>coucou</p>
+			<a href="#" class="X"><p>X</p></a>	
+		</div>
+	</a>
+</body>
+</html>
