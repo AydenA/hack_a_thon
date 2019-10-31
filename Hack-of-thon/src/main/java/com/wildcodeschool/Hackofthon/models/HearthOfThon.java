@@ -7,6 +7,7 @@ import java.util.Collections;
 
 public class HearthOfThon {
 	
+	private static Card blankCard = new Card ();
 	private static Card[] globalDeck = Deck.createCards();
     private static Player player1 = new Player(1, "Michel");
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
@@ -21,7 +22,7 @@ public class HearthOfThon {
     
     
     public static Card[] createPlayerDeck () {
-    	Card[] playerDeck = new Card[] {globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
+    	Card[] playerDeck = new Card[] {globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9], blankCard};
     	for (int i = 0; i < playerDeck.length; i++) {
     		playerDeck[i].setLife(20 + randomVar(20));
     	}
@@ -30,8 +31,8 @@ public class HearthOfThon {
     
     
     public static Card[] createComputerDeck () {
-    	Card[] computerDeck = new Card[] {globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
-    	for (int i = 0; i < computerDeck.length; i++) {
+    	Card[] computerDeck = new Card[] {globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18], blankCard};
+    	for (int i = 0; i < computerDeck.length - 1; i++) {
     		computerDeck[i].setLife(20 + randomVar(20));
     	}
     	return computerDeck;
