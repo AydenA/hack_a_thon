@@ -29,6 +29,9 @@ body {
 
 .gamePhase {
 	color: white;
+	font-size:1.6em;
+	margin-top: 10px;
+	padding-left: 10px;
 }
 
 .computerBoard, .playerBoard {
@@ -236,6 +239,7 @@ body {
 	text-align: center;
 	font-size: x-large;
 	font-style: italic;
+	color:white;
 }
 
 .computer {
@@ -258,6 +262,7 @@ body {
 	text-align: center;
 	font-size: x-large;
 	font-style: italic;
+	color:white;
 }
 
 .song {
@@ -586,5 +591,13 @@ figcaption{
   100%{  	width:100%;
   	visibility:visible;
   }
+}
+#gif {
+	position:fixed;
+	width:50%;
+	top:15%;
+	left:20%;
+	z-index:100;
+	display:none;
 }
 

@@ -69,6 +69,8 @@ body {
 .gamePhase {
 	margin-top: 10px;
 	padding-left: 10px;
+	font-size:1.6em;
+	color:white;
 }
 
 .playerPioche, .computerPioche {
