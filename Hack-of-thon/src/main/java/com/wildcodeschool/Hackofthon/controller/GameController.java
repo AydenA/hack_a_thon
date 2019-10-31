@@ -41,4 +41,14 @@ public class GameController {
 		HearthOfThon.takeHit(playerDeck[1], computerDeck[1]);
 		return "board2";
 	}
+	
+	@GetMapping("/victory")
+	public String returnVictory() {
+		return "victory";
+	}
+	
+	@GetMapping("/defeat")
+	public String returnloose() {
+		return "defeat";
+	}
 }
