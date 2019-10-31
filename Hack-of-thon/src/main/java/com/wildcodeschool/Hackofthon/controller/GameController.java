@@ -22,6 +22,8 @@ public class GameController {
 	public String firstTurnController(Model model) {
 		Card[] playerDeck = HearthOfThon.createPlayerDeck();
 		Card[] computerDeck = HearthOfThon.createOrdiDeck();
+		HearthOfThon.deckShuffle(playerDeck);
+		HearthOfThon.deckShuffle(computerDeck);
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
 		return "board";

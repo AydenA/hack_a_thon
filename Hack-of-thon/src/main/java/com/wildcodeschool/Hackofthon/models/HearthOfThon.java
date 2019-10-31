@@ -15,6 +15,26 @@ public class HearthOfThon {
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
             "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
 
+    
+    public static Card[] deckShuffle (Card[] deck) {
+		List<Card> listCard = Arrays.asList(deck);
+		Collections.shuffle(listCard);
+		return listCard.toArray(deck);
+    }
+    
+    
+    public static Card[] createPlayerDeck () {
+    	Card[] playerDeck = new Card[] {globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
+    	return playerDeck;
+    }
+    
+    
+    public static Card[] createOrdiDeck () {
+    	Card[] ordiDeck = new Card[] {globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
+    	return ordiDeck;
+    }
+    
+    
     private static int takeHit(Card card1, Card card2) {
         int damageDeal = card2.getAttack() + randomInt(10);
         card1.setLife((card1.getLife() + card1.getDefense()) - damageDeal);
@@ -25,26 +45,7 @@ public class HearthOfThon {
     }
 
     
-    private static Card[] cardShuffle () {
-		List<Card> listCard = Arrays.asList(globalDeck);
-		Collections.shuffle(listCard);
-		return listCard.toArray(globalDeck);
-    }
-    
-    
-    public static Card[] createPlayerDeck () {
-    	Card[] playerDeck = new Card[] {globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
-    	return playerDeck;
-    }
-    
-    public static Card[] createOrdiDeck () {
-    	Card[] ordiDeck = new Card[] {globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
-    	return ordiDeck;
-    }
-
-    
     private static String displayStatusBattle( boolean battleResult) {
-			
 		if (battleResult)
 			return "Félicitation vous avez remporté la victoire !!";
 		return "Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
@@ -52,7 +53,6 @@ public class HearthOfThon {
     
 
     private static String xpGain(double levelJoueur, double levelAdversaire) {
-
         double levelDiff = levelJoueur - levelAdversaire;
         if (levelDiff > 10) {
             return "Vous ne gagnez pas de points d'expérience.";
