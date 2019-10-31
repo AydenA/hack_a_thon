@@ -9,7 +9,7 @@
 	<div class="console">
 	</div>
 	<div class = "computer">
-		<img src="https://via.placeholder.com/150" alt="">
+		<img src="/img/cp.png" alt="">
 		<div class = "computerLife"></div>
 	</div>
 	<div class="computerPioche">
@@ -34,73 +34,73 @@
 	<div class = "playerBoard">
 		<div class= "card card1">
 			<div class="boxDescription">
-				<img src="https://cdn.pixabay.com/photo/2015/01/13/17/16/zombie-598390_960_720.jpg" alt="zombie picture"/>
-				<h1>Zombie Killer</h1>
+				<img th:src="${playerDeck[0].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[0].name}" >Zombie Killer</h1>
 				<div class="informationTarget">
-					<p class="informationTargetcharacteristic">life : 800</p>
-					<p class="informationTargetcharacteristic">attack : 15</p>
-					<p class="informationTargetcharacteristic">defense : 5</p>
+					<p th:text = "|life : ${playerDeck[0].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[0].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[0].defense}|" class="informationTargetcharacteristic">defense : 5</p>
 				</div>
-				<p class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+				<p th:text = "${playerDeck[0].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
 			</div>
 		</div>
 		<div class= "card card2">
 			<div class="boxDescription">
-				<img src="https://cdn.pixabay.com/photo/2017/07/30/15/38/zombie-2554660__340.jpg" alt="dolly picture"/>
-				<h1>Dolly nightmare</h1>
+				<img th:src="${playerDeck[1].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[1].name}" >Zombie Killer</h1>
 				<div class="informationTarget">
-					<p class="informationTargetcharacteristic">life : 800</p>
-					<p class="informationTargetcharacteristic">attack : 15</p>
-					<p class="informationTargetcharacteristic">defense : 5</p>
+					<p th:text = "|life : ${playerDeck[1].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[1].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[1].defense}|" class="informationTargetcharacteristic">defense : 5</p>
 				</div>
-				<p class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+				<p th:text = "${playerDeck[1].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
 			</div>
 		</div>
 		<div class= "card card3">
 			<div class="boxDescription">
-				<img src="https://cdn.pixabay.com/photo/2015/01/13/17/16/zombie-598390_960_720.jpg" alt="zombie picture"/>
-				<h1>Zombie Killer</h1>
+				<img th:src="${playerDeck[2].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[2].name}" >Zombie Killer</h1>
 				<div class="informationTarget">
-					<p class="informationTargetcharacteristic">life : 800</p>
-					<p class="informationTargetcharacteristic">attack : 15</p>
-					<p class="informationTargetcharacteristic">defense : 5</p>
+					<p th:text = "|life : ${playerDeck[2].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[2].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[2].defense}|" class="informationTargetcharacteristic">defense : 5</p>
 				</div>
-				<p class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+				<p th:text = "${playerDeck[2].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
 			</div>
 		</div>
 		<div class= "card card4">
 			<div class="boxDescription">
-				<img src="https://cdn.pixabay.com/photo/2015/01/13/17/16/zombie-598390_960_720.jpg" alt="zombie picture"/>
-				<h1>Zombie Killer</h1>
+				<img th:src="${playerDeck[3].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[3].name}" >Zombie Killer</h1>
 				<div class="informationTarget">
-					<p class="informationTargetcharacteristic">life : 800</p>
-					<p class="informationTargetcharacteristic">attack : 15</p>
-					<p class="informationTargetcharacteristic">defense : 5</p>
+					<p th:text = "|life : ${playerDeck[3].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[3].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[3].defense}|" class="informationTargetcharacteristic">defense : 5</p>
 				</div>
-				<p class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+				<p th:text = "${playerDeck[3].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
 			</div>
 		</div>
 		<div class= "card card5">
 			<div class="boxDescription">
-				<img src="https://cdn.pixabay.com/photo/2015/01/13/17/16/zombie-598390_960_720.jpg" alt="zombie picture"/>
-				<h1>Zombie Killer</h1>
+				<img th:src="${playerDeck[4].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[4].name}" >Zombie Killer</h1>
 				<div class="informationTarget">
-					<p class="informationTargetcharacteristic">life : 800</p>
-					<p class="informationTargetcharacteristic">attack : 15</p>
-					<p class="informationTargetcharacteristic">defense : 5</p>
+					<p th:text = "|life : ${playerDeck[4].life}|" class="informationTargetcharacteristic">life : 800</p>
+					<p th:text = "|attack : ${playerDeck[4].attack}|" class="informationTargetcharacteristic">attack : 15</p>
+					<p th:text = "|defense : ${playerDeck[4].defense}|" class="informationTargetcharacteristic">defense : 5</p>
 				</div>
-				<p class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
+				<p th:text = "${playerDeck[4].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend sem ac felis aliquam vehicula.  </p>
 			</div>
 		</div>
 	</div>
 	
 	
 	<div class = "player">
-		<img src="https://via.placeholder.com/150" alt="">
+		<img src="/img/toppng.com-cute-monsters-1024x1024.png" alt="">
 		<div class = "playerLife"></div>
 	</div>
 
-	<a href=""class="playerPioche" title="tirer une carte">
+	<a href="#here" class="playerPioche" title="tirer une carte" id="here">
 		<div class ="piocheCard piocheCard1"></div>
 		<div class ="piocheCard piocheCard2"></div>
 		<div class ="piocheCard piocheCard3"></div>
@@ -111,15 +111,21 @@
 		<div class ="piocheCard piocheCard8"></div>
 		<div class ="piocheCard piocheCard9"></div>
 		<div class ="piocheCard piocheCard10"></div>
+		<div class=toShow>	
+			<p class=toShow>coucou</p>
+			<a href="#" class="X"><p>X</p></a>	
+		</div>
 	</a>
 <div class="song">
-	<div class="title">Kawausoya - Sarazanmai</div>
+	<div class="title"></div>
 	<div class="pause" onclick="togglePlay()">🔇</div>
 	<div class="player">
 		<audio class="audio" src="saw-musique-officiel.mp3" autoplay type="audio" loop=""></audio>
 	</div>
-
+	
 </div>
 <script src="board.js"></script>
+<div class="monsterPlayer1" th:each="monster:${playerDeck}">
+</div>	
 </body>
 </html>
