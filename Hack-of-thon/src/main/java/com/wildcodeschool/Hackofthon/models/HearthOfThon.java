@@ -46,8 +46,8 @@ public class HearthOfThon {
     private static String displayStatusBattle( boolean battleResult) {
 			
 		if (battleResult)
-			return " Félicitation vous avez remporté la victoire !!";
-		return " Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
+			return "Félicitation vous avez remporté la victoire !!";
+		return "Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
 	}
     
 
