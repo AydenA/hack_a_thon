@@ -54,4 +54,14 @@ public class GameController {
 		model.addAttribute("displayMessage", displayMessage);
 		return "board2";
 	}
+	
+	@GetMapping("/victory")
+	public String returnVictory() {
+		return "victory";
+	}
+	
+	@GetMapping("/defeat")
+	public String returnloose() {
+		return "defeat";
+	}
 }
