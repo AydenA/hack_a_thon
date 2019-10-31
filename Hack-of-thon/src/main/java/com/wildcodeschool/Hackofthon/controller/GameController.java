@@ -11,7 +11,8 @@ import com.wildcodeschool.Hackofthon.models.HearthOfThon;
 @Controller
 public class GameController {
 	
-	private static Card[] playerDeck;	
+	private static String displayMessage;
+	private static Card[] playerDeck;
 	private static Card[] computerDeck;
 	private static int playerLife;
 	private static int computerLife;
@@ -39,11 +40,18 @@ public class GameController {
 	@GetMapping("/board2")
 	public String secondTurnController(Model model, @RequestParam(value="idMonster",
 			required=true) String idMonster) {
-		computerLife -= HearthOfThon.takeHit(playerDeck[Integer.valueOf(idMonster)],computerDeck[Integer.valueOf(idMonster)]);
+		int damageDeals = HearthOfThon.takeHit(computerDeck[Integer.valueOf(idMonster)],playerDeck[Integer.valueOf(idMonster)]);
+		if (damageDeals < 0) {
+			damageDeals = 0;
+		}
+		computerLife -= damageDeals;
+		displayMessage = "Vous avez infligé" + damageDeals + "dégats.";
+			
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
 		model.addAttribute("playerLife",playerLife);
 		model.addAttribute("computerLife",computerLife);
+		model.addAttribute("displayMessage", displayMessage);
 		return "board2";
 	}
 }

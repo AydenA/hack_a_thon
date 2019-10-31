@@ -19,9 +19,10 @@ public class HearthOfThon {
     
     public static Card[] createPlayerDeck () {
     	playerLife = 0;
-    	playerDeck = new Card[] {blankCard, globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
-    	for (int i = 0; i < playerDeck.length; i++) {
-    		int lifePoints = 20 + randomVar(20);
+    	playerDeck = new Card[] {blankCard, globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4]};
+    	for (int i = 1; i < playerDeck.length; i++) {
+    		int lifePoints = 0;
+    		lifePoints = 20 + randomVar(20);
     		playerDeck[i].setLife(lifePoints);
     		playerLife += lifePoints;
     	}
@@ -31,8 +32,8 @@ public class HearthOfThon {
     
     public static Card[] createComputerDeck () {
     	computerLife = 0;
-    	computerDeck = new Card[] {blankCard, globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
-    	for (int i = 0; i < computerDeck.length - 1; i++) {
+    	computerDeck = new Card[] {blankCard, globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
+    	for (int i = 1; i < computerDeck.length; i++) {
     		int lifePoints = 20 + randomVar(20);
     		computerDeck[i].setLife(lifePoints);
     		computerLife += lifePoints;
@@ -52,12 +53,11 @@ public class HearthOfThon {
     
     
     public static int takeHit(Card card1, Card card2) {
-        int damageDeal = card2.getAttack() + randomVar(10);
-        card1.setLife((card1.getLife() + card1.getDefense()) - damageDeal);
+        int damageDeal = card1.getDefense() - card2.getAttack() + randomVar(10);
+        card1.setLife(card1.getLife() - damageDeal);
         if (card1.getLife() < 0) {
             card1.setLife(0);
         }
-        System.out.print(card1.getLife());
         return damageDeal;
     }
     
