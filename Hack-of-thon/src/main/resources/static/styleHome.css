@@ -93,6 +93,7 @@ body{
 	bottom:20px;
 	left:calc(10px + 45%);
 }
+
 .piocheCard2{
 	position:fixed;
 	bottom:20px;
@@ -263,4 +264,71 @@ body{
 	height:150px;
 }
 
+.boxDescription {
+	border: 1px outset grey;
+	margin-left:740px;
+	width:20%;
+	height:auto;
+	position:fixed;
+	text-align:center;
+	background-color:black;
+	opacity:0.8;
+	bottom:30;
+	right:8%;
+	top:25%;
+	visibility:hidden;
+	/*display:none;*/
+}
+
+.boxDescription img {
+	width:100%;
+	height:auto;
+	padding:2%;
+}
+.boxDescription h1{
+	color:white;
+	opacity:0.8;
+	text-transform:uppercase;
+}
+
+.informationTarget {
+	display:flex;
+}
+
+.informationTargetcharacteristic {
+	color:#ffff;
+	width:calc(100%/3);
+	font-size:11pt;
+	font-weight: bold;
+	text-transform:uppercase;
+	padding:1%;
+	
+}
+
+.boxDescriptionText {
+	text-align:left;
+	color: white;
+	padding:5%;
+	opacity:0.9;
+}
+
+.card1:hover .boxDescription {
+	visibility:visible;
+}
+
+.card2:hover .boxDescription {
+	visibility:visible;
+}
+
+.card3:hover .boxDescription {
+	visibility:visible;
+}
+
+.card4:hover .boxDescription {
+	visibility:visible;
+}
+
+.card5:hover .boxDescription {
+	visibility:visible;
+}
 
