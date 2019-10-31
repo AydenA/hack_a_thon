@@ -46,7 +46,10 @@ public class GameController {
 		}
 		computerLife -= damageDeals;
 		displayMessage = "Vous avez infligé" + damageDeals + "dégats.";
-			
+		if (computerDeck[Integer.valueOf(idMonster)].getLife() <= 0) {
+			computerDeck[Integer.valueOf(idMonster)] = computerDeck[0];
+		}
+		
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
 		model.addAttribute("playerLife",playerLife);
