@@ -12,7 +12,7 @@
 	</div>
 	<div class="computer">
 		<img src="/img/cp.png" alt="">
-		<div class = "computerLife">100 PV</div>
+		<div class="computerLife">100 PV</div>
 	</div>
 	<div class="computerPioche">
 		<div class="piocheCard piocheCardComputer1"></div>
@@ -37,34 +37,7 @@
 		<a href="#">
 			<div class="card card1">
 				<figure>
-					<img class="overCard" th:src="${playerDeck[0].picture}" alt="Card picture">
-					<figcaption class="buttonContainer">
-						<a class="button" href="#">Attaquer</a>
-					</figcaption>
-				</figure>
-				<div class="boxDescription">
-					<img th:src="${playerDeck[0].picture}" alt="zombie picture" />
-					<h1 th:text="${playerDeck[0].name}">Zombie Killer</h1>
-					<div class="informationTarget">
-						<p th:text="|life : ${playerDeck[0].life}|" class="informationTargetcharacteristic">life : 800
-						</p>
-						<p th:text="|attack : ${playerDeck[0].attack}|" class="informationTargetcharacteristic">attack :
-							15</p>
-						<p th:text="|defense : ${playerDeck[0].defense}|" class="informationTargetcharacteristic">
-							defense : 5</p>
-					</div>
-					<p th:text="${playerDeck[0].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus
-						augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut
-						auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem
-						et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend
-						sem ac felis aliquam vehicula. </p>
-				</div>
-			</div>
-		</a>
-		<a href="#">
-			<div class="card card2">
-				<figure>
-					<img class="overCard" th:src="${playerDeck[1].picture}" alt="Card picture">
+					<img class="overCard" th:src="${playerDeck[1].picture}">
 					<figcaption class="buttonContainer">
 						<a class="button" href="#">Attaquer</a>
 					</figcaption>
@@ -88,10 +61,10 @@
 				</div>
 			</div>
 		</a>
-		<a href="test">
-			<div class="card card3">
+		<a href="#">
+			<div class="card card2">
 				<figure>
-					<img class="overCard" th:src="${playerDeck[2].picture}" alt="Card picture">
+					<img class="overCard" th:src="${playerDeck[2].picture}">
 					<figcaption class="buttonContainer">
 						<a class="button" href="#">Attaquer</a>
 					</figcaption>
@@ -115,10 +88,10 @@
 				</div>
 			</div>
 		</a>
-		<a href="#">
-			<div class="card card4">
+		<a href="test">
+			<div class="card card3">
 				<figure>
-					<img class="overCard" th:src="${playerDeck[3].picture}" alt="Card picture">
+					<img class="overCard" th:src="${playerDeck[3].picture}">
 					<figcaption class="buttonContainer">
 						<a class="button" href="#">Attaquer</a>
 					</figcaption>
@@ -143,9 +116,9 @@
 			</div>
 		</a>
 		<a href="#">
-			<div class="card card5">
+			<div class="card card4">
 				<figure>
-					<img class="overCard" th:src="${playerDeck[4].picture}" alt="Card picture">
+					<img class="overCard" th:src="${playerDeck[4].picture}">
 					<figcaption class="buttonContainer">
 						<a class="button" href="#">Attaquer</a>
 					</figcaption>
@@ -154,14 +127,41 @@
 					<img th:src="${playerDeck[4].picture}" alt="zombie picture" />
 					<h1 th:text="${playerDeck[4].name}">Zombie Killer</h1>
 					<div class="informationTarget">
-						<p th:text="|life : ${playerDeck[4].life}|" class="informationTargetcharacteristic">life :
-							800</p>
-						<p th:text="|attack : ${playerDeck[4].attack}|" class="informationTargetcharacteristic">
-							attack : 15</p>
+						<p th:text="|life : ${playerDeck[4].life}|" class="informationTargetcharacteristic">life : 800
+						</p>
+						<p th:text="|attack : ${playerDeck[4].attack}|" class="informationTargetcharacteristic">attack :
+							15</p>
 						<p th:text="|defense : ${playerDeck[4].defense}|" class="informationTargetcharacteristic">
 							defense : 5</p>
 					</div>
-					<p th:text="${playerDeck[4].description}" class="boxDescriptionText"> Lorem ipsum dolor sit
+					<p th:text="${playerDeck[4].description}" class="boxDescriptionText"> Lorem ipsum dolor sit pibus
+						augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum fermentum. Ut
+						auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan. Proin vitae lorem
+						et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat tellus. Praesent eleifend
+						sem ac felis aliquam vehicula. </p>
+				</div>
+			</div>
+		</a>
+		<a href="#">
+			<div class="card card5">
+				<figure>
+					<img class="overCard" th:src="${playerDeck[5].picture}">
+					<figcaption class="buttonContainer">
+						<a class="button" href="#">Attaquer</a>
+					</figcaption>
+				</figure>
+				<div class="boxDescription">
+					<img th:src="${playerDeck[5].picture}" alt="zombie picture" />
+					<h1 th:text="${playerDeck[5].name}">Zombie Killer</h1>
+					<div class="informationTarget">
+						<p th:text="|life : ${playerDeck[5].life}|" class="informationTargetcharacteristic">life :
+							800</p>
+						<p th:text="|attack : ${playerDeck[5].attack}|" class="informationTargetcharacteristic">
+							attack : 15</p>
+						<p th:text="|defense : ${playerDeck[5].defense}|" class="informationTargetcharacteristic">
+							defense : 5</p>
+					</div>
+					<p th:text="${playerDeck[5].description}" class="boxDescriptionText"> Lorem ipsum dolor sit
 						pibus augue, vitae consectetur enim. Cras semper sagittis eros sed ultricies bibendum
 						fermentum. Ut auctor scelerisque est in posuere. Pellentesque efficitur tristique accumsan.
 						Proin vitae lorem et erat posuere iaculis. Vestibulum sit amet mollis ipsum, eu volutpat
@@ -174,7 +174,7 @@
 
 	<div class="player">
 		<img src="/img/toppng.com-cute-monsters-1024x1024.png" alt="">
-		<div class = "playerLife">100 pv</div>
+		<div class="playerLife">100 pv</div>
 	</div>
 
 	<a href="#here" class="playerPioche" title="tirer une carte" id="here">
@@ -203,9 +203,56 @@
 		</div>
 
 	</div>
+<<<<<<< HEAD
+
+</div>
+
+			<div class="pCard0"><p class="pCard0">Tirage des cartes du joueur</p></div>
+			<div class="pCard pCard1">
+				<img th:src="${playerDeck[1].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[1].name}" >Zombie Killer</h1>
+			</div>
+			<div class="pCard pCard2">
+				<img th:src="${playerDeck[2].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[2].name}" >Zombie Killer</h1>
+			</div>
+			<div class="pCard pCard3">
+				<img th:src="${playerDeck[3].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[3].name}" >Zombie Killer</h1>
+			</div>
+			<div class="pCard pCard4">
+				<img th:src="${playerDeck[4].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[4].name}" >Zombie Killer</h1>
+			</div>
+			<div class="pCard pCard5">
+				<img th:src="${playerDeck[5].picture}" alt="zombie picture"/>
+				<h1 th:text = "${playerDeck[5].name}" >Zombie Killer</h1>
+			</div>
+			
+			<!-- computer -->
+			<div class="cCard0"><p class="cCard0">Tirage des cartes de l'ordinateur</p></div>
+			<div class="cCard cCard1">
+				<img th:src="${computerDeck[1].picture}" alt="zombie picture"/>
+				<h1 th:text = "${computerDeck[1].name}" >Zombie Killer</h1>
+			</div>
+			<div class="cCard cCard2">
+				<img th:src="${computerDeck[2].picture}" alt="zombie picture"/>
+				<h1 th:text = "${computerDeck[2].name}" >Zombie Killer</h1>
+			</div>
+			<div class="cCard cCard3">
+				<img th:src="${computerDeck[3].picture}" alt="zombie picture"/>
+				<h1 th:text = "${computerDeck[3].name}" >Zombie Killer</h1>
+			</div>
+			<div class="cCard cCard4">
+				<img th:src="${computerDeck[4].picture}" alt="zombie picture"/>
+				<h1 th:text = "${computerDeck[4].name}" >Zombie Killer</h1>
+			</div>
+			<div class="cCard cCard5">
+				<img th:src="${computerDeck[5].picture}" alt="zombie picture"/>
+				<h1 th:text = "${computerDeck[5].name}" >Zombie Killer</h1>
+			</div>
 	<script src="board.js"></script>
-	<div class="monsterPlayer1" th:each="monster:${playerDeck}">
-	</div>
+
 </body>
 
 </html>
