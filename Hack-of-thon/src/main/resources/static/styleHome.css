@@ -563,4 +563,31 @@ body {
 	border-radius: 5px;
 	visibility: visible;
 	z-index: 10;
+
 }
+
+.overCard{
+
+	animation: 22s popup;
+}
+
+figcaption{
+
+	visibility:visible;
+	animation: 22s popup;
+}
+
+@keyframes popup {
+  0% {
+  	width:0%;
+  	visibility:hidden;
+  }
+  99% {
+  	width:0%;
+  	visibility:hidden;
+  }
+  100%{  	width:100%;
+  	visibility:visible;
+  }
+}
+
