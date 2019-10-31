@@ -6,7 +6,7 @@
 }
 
 body{
-	background: url("162297.jpg");
+	background: url("/img/162297.jpg");
 	background-size: cover;
 	width:100vw;
 	max-width:100%;
@@ -50,7 +50,7 @@ body{
 .card, .piocheCard{
 	width:calc(250px / 2);
 	height:calc(376px / 2);
-	background: url("Backgroundcard.png");
+	background: url("/img/Backgroundcard.png");
 	background-size: cover;
 	background-position: 145px 0px;
 	border-radius: 5px;
