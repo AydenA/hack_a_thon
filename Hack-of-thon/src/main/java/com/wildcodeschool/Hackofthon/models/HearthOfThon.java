@@ -104,7 +104,7 @@ public class HearthOfThon {
     
     
     private static int randomVar(int variation) {
-        return (int) (Math.random() * variation - (variation * 2));
+        return (int) (Math.random() * variation - (variation / 2));
     }
     
 }
