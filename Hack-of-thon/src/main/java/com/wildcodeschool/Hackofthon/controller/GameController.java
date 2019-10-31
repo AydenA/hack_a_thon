@@ -37,6 +37,8 @@ public class GameController {
 		HearthOfThon.deckShuffle(computerDeck);
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
+		/*model.addAttribute("playerDeck", Deck.getPlayerDeck());
+		model.addAttribute("computerDeck", Deck.getComputerDeck());*/
 		return "board2";
 	}
 }
