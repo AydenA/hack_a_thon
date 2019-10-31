@@ -45,13 +45,25 @@ public class GameController {
 			damageDeals = 0;
 		}
 		computerLife -= damageDeals;
-		displayMessage = "Vous avez infligé" + damageDeals + "dégats.";
-			
+		displayMessage = "Vous avez infligé " + damageDeals + " dégats.";
+		if (computerDeck[Integer.valueOf(idMonster)].getLife() <= 0) {
+			computerDeck[Integer.valueOf(idMonster)] = computerDeck[0];
+		}
+		if (playerLife <= 0) {
+			return "defeat";
+		}
+		if (computerLife <= 0) {
+			return "victory";
+		}
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
 		model.addAttribute("playerLife",playerLife);
 		model.addAttribute("computerLife",computerLife);
 		model.addAttribute("displayMessage", displayMessage);
+		
+		
+		
+		
 		return "board2";
 	}
 	
