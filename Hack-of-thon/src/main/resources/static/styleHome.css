@@ -207,10 +207,12 @@ body{
 }
 .playerLife{
 	width:200px;
-	height:20px;
+	height:29px;
 	background-color: red;
 	border:1px solid black;
-
+	text-align: center;
+	font-size: x-large;
+	font-style: italic;
 }
 
 .computer{
@@ -226,9 +228,12 @@ body{
 }
 .computerLife{
 	width:200px;
-	height:20px;
+	height:29px;
 	background-color: red;
 	border:1px solid black;
+	text-align: center;
+	font-size: x-large;
+	font-style: italic;
 
 }
 
@@ -277,7 +282,8 @@ body{
 	right:8%;
 	top:25%;
 	visibility:hidden;
-	/*display:none;*/
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .boxDescription img {
@@ -314,21 +320,26 @@ body{
 
 .card1:hover .boxDescription {
 	visibility:visible;
+	opacity: 1;
 }
 
 .card2:hover .boxDescription {
 	visibility:visible;
+	opacity: 1;
 }
 
 .card3:hover .boxDescription {
 	visibility:visible;
+	opacity: 1;
 }
 
 .card4:hover .boxDescription {
 	visibility:visible;
+	opacity: 1;
 }
 
 .card5:hover .boxDescription {
 	visibility:visible;
+	opacity: 1;
 }
 
