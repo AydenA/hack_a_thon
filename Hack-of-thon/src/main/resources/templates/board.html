@@ -9,7 +9,7 @@
 	<div class="console">
 	</div>
 	<div class = "computer">
-		<img src="https://via.placeholder.com/150" alt="">
+		<img src="/img/cp.png" alt="">
 		<div class = "computerLife"></div>
 	</div>
 	<div class="computerPioche">
@@ -40,11 +40,11 @@
 	</div>
 	
 	<div class = "player">
-		<img src="https://via.placeholder.com/150" alt="">
+		<img src="/img/toppng.com-cute-monsters-1024x1024.png" alt="">
 		<div class = "playerLife"></div>
 	</div>
 
-	<a href=""class="playerPioche" title="tirer une carte">
+	<a href="#here" class="playerPioche" title="tirer une carte" id="here">
 		<div class ="piocheCard piocheCard1"></div>
 		<div class ="piocheCard piocheCard2"></div>
 		<div class ="piocheCard piocheCard3"></div>
@@ -55,15 +55,21 @@
 		<div class ="piocheCard piocheCard8"></div>
 		<div class ="piocheCard piocheCard9"></div>
 		<div class ="piocheCard piocheCard10"></div>
+		<div class=toShow>	
+			<p class=toShow>coucou</p>
+			<a href="#" class="X"><p>X</p></a>	
+		</div>
 	</a>
 <div class="song">
-	<div class="title">Kawausoya - Sarazanmai</div>
+	<div class="title"></div>
 	<div class="pause" onclick="togglePlay()">🔇</div>
 	<div class="player">
 		<audio class="audio" src="saw-musique-officiel.mp3" autoplay type="audio" loop=""></audio>
 	</div>
-
+	
 </div>
 <script src="board.js"></script>
+<div class="monsterPlayer1" th:each="monster:${playerDeck}">
+</div>	
 </body>
 </html>

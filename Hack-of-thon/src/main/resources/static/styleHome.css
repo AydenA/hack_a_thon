@@ -244,3 +244,23 @@ body{
 	margin-left: 0.5em;
 	cursor:pointer;
 }
+
+.toShow{
+	color:white;
+	font-size:3rem;
+	visibility:hidden;
+	position:fixed;
+	right:0;
+	top:50;
+}
+
+#here:target .toShow{
+	visibility:visible;	
+}
+
+.player img, .computer img{
+	width:150px;
+	height:150px;
+}
+
+
