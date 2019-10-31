@@ -50,7 +50,7 @@ public class GameController {
 		if (computerDeck[Integer.valueOf(idMonster)].getLife() <= 0) {
 			computerDeck[Integer.valueOf(idMonster)] = computerDeck[0];
 		}
-		int invar = 10 + HearthOfThon.randomVar(20);
+		int invar = 7 + HearthOfThon.randomVar(10);
 		playerLife-=invar;
 		displayMessage2 = "Vous avez subi " + invar + " dégats.";
 		
