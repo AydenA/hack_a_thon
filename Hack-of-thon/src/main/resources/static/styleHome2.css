@@ -48,6 +48,11 @@ body {
 	margin-left: 15px;
 }
 
+.gamePhase {
+	margin-top:10px;
+	padding-left: 10px;
+}
+
 .card, .piocheCard {
 	width: calc(250px / 2);
 	height: calc(376px / 2);
