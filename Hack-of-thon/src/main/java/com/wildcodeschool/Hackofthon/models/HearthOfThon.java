@@ -13,14 +13,6 @@ public class HearthOfThon {
     private static String[] ranks = new String[] { "Novice", "Fighter", "Warrior", "Veteran", "Sage", "Elite",
             "Conqueror", "Champion", "Master", "Greatest", "Java > PHP" };
 
-    
-    public static Card[] deckShuffle (Card[] deck) {
-		List<Card> listCard = Arrays.asList(deck);
-		Collections.shuffle(listCard);
-		return listCard.toArray(deck);
-    }
-    
-    
     public static Card[] createPlayerDeck () {
     	Card[] playerDeck = new Card[] {blankCard, globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
     	for (int i = 0; i < playerDeck.length; i++) {
@@ -46,6 +38,13 @@ public class HearthOfThon {
             card1.setLife(0);
         }
         return damageDeal;
+    }
+    
+    
+    public static Card[] deckShuffle (Card[] deck) {
+		List<Card> listCard = Arrays.asList(deck);
+		Collections.shuffle(listCard);
+		return listCard.toArray(deck);
     }
 
     

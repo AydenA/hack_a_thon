@@ -11,8 +11,8 @@ import reactor.core.publisher.Mono;
 
 		
 public class Deck {
-			
-		
+
+		private static Card[] cards;
 		static String url = "https://hackathon-wild-hackoween.herokuapp.com/monsters";
 		
 		public static Card[] createCards() {
@@ -29,7 +29,7 @@ public class Deck {
 
 				JsonNode monster = objectMapper.readTree(response).get("monsters");
 
-			   cards = objectMapper.convertValue(monster, Card[].class);
+			    cards = objectMapper.convertValue(monster, Card[].class);
 			} 
 			
 			catch (IOException e) {
@@ -37,9 +37,14 @@ public class Deck {
 			   e.printStackTrace();
 
 			}
-			
+
+			HearthOfThon.deckShuffle(cards);
 			return cards;
 
+		}
+
+		public Card[] getCards() {
+			return this.cards;
 		}
 
 }

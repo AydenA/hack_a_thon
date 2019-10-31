@@ -1,512 +1,534 @@
-*{
-	margin:0;
-	padding:0;
+* {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-	animation:fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
 }
 
-body{
+body {
 	background: url("/img/162297.jpg");
 	background-size: cover;
-	width:100vw;
-	max-width:100%;
-	height:100vh;
-	max-height:100%;
-	display:flex;
+	width: 100vw;
+	max-width: 100%;
+	height: 100vh;
+	max-height: 100%;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.console{
-	position:fixed;
-	top:0;
-	width:20vw;
-	margin-left: 10px; 
-	margin-top:20px;
-	height:70%;
+.console {
+	position: fixed;
+	top: 0;
+	width: 20vw;
+	margin-left: 10px;
+	margin-top: 20px;
+	height: 70%;
 	background-color: black;
 }
 
-.computerBoard, .playerBoard{
-	display:flex;
-	flex-direction:row;
-	width:100vw;
-	max-width:100%;
-
+.computerBoard, .playerBoard {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	max-width: 100%;
 	justify-content: center;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 }
 
-.computerBoard .card,.playerBoard .card{
-	margin-left:15px;
+.computerBoard .card, .playerBoard .card {
+	margin-left: 15px;
 }
 
-
-
-.computerBoard .card{
-	margin-left:15px;
+.computerBoard .card {
+	margin-left: 15px;
 }
 
-.card, .piocheCard{
-	width:calc(250px / 2);
-	height:calc(376px / 2);
+.card, .piocheCard {
+	width: calc(250px / 2);
+	height: calc(376px / 2);
 	background: url("/img/Backgroundcard.png");
 	background-size: cover;
 	background-position: 145px 0px;
 	border-radius: 5px;
 	box-shadow: 2px 5px 2px grey;
-	border:1px solid black;
-
+	border: 1px solid black;
 }
-.playerBoard{
+
+.playerBoard {
 	align-items: flex-start;
-	margin-bottom:10px;
+	margin-bottom: 10px;
 }
 
-.computerBoard{
+.computerBoard {
 	align-items: flex-end;
-	margin-top:20px;
-	height:20vh;	
+	margin-top: 20px;
+	height: 20vh;
 }
 
-.playerPioche, .computerPioche{
-	display:flex;
-	align-items:center;
-	justify-content:center;
+.playerPioche, .computerPioche {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.computerPioche{
-	margin-top:20px;
+.computerPioche {
+	margin-top: 20px;
 }
 
-.playerPioche{
-	position:fixed;
-	margin-bottom:10px;
+.playerPioche {
+	position: fixed;
+	margin-bottom: 10px;
 	height: 22vh;
-    width: 10vw;
-	bottom:0;
-	left:45%;
+	width: 10vw;
+	bottom: 0;
+	left: 45%;
 }
 
-.piocheCard1{
-	position:fixed;
-	bottom:20px;
-	left:calc(10px + 45%);
+.piocheCard1 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(10px + 45%);
 }
 
-.piocheCard2{
-	position:fixed;
-	bottom:20px;
-	left:calc(15px + 45%);
+.piocheCard2 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(15px + 45%);
 }
-.piocheCard3{
-	position:fixed;
-	bottom:20px;
-	left:calc(20px + 45%);
+
+.piocheCard3 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(20px + 45%);
 }
-.piocheCard4{
-	position:fixed;
-	bottom:20px;
-	left:calc(25px + 45%);
+
+.piocheCard4 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(25px + 45%);
 }
-.piocheCard5{
-	position:fixed;
-	bottom:20px;
-	left:calc(30px + 45%);
+
+.piocheCard5 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(30px + 45%);
 }
-.piocheCard6{
-	position:fixed;
-	bottom:20px;
-	left:calc(35px + 45%);
+
+.piocheCard6 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(35px + 45%);
 }
-.piocheCard7{
-	position:fixed;
-	bottom:20px;
-	left:calc(40px + 45%);
+
+.piocheCard7 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(40px + 45%);
 }
-.piocheCard8{
-	position:fixed;
-	bottom:20px;
-	left:calc(45px + 45%);
+
+.piocheCard8 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(45px + 45%);
 }
-.piocheCard9{
-	position:fixed;
-	bottom:20px;
-	left:calc(50px + 45%);
+
+.piocheCard9 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(50px + 45%);
 }
-.piocheCard10{
-	position:fixed;
-	bottom:20px;
-	left:calc(55px + 45%);
+
+.piocheCard10 {
+	position: fixed;
+	bottom: 20px;
+	left: calc(55px + 45%);
 }
 
 /* computer */
 
-
-.piocheCardComputer1{
-	position:fixed;
-	top:20px;
-	left:calc(10px + 45%);
-}
-.piocheCardComputer2{
-	position:fixed;
-	top:20px;
-	left:calc(15px + 45%);
-}
-.piocheCardComputer3{
-	position:fixed;
-	top:20px;
-	left:calc(20px + 45%);
-}
-.piocheCardComputer4{
-	position:fixed;
-	top:20px;
-	left:calc(25px + 45%);
-}
-.piocheCardComputer5{
-	position:fixed;
-	top:20px;
-	left:calc(30px + 45%);
-}
-.piocheCardComputer6{
-	position:fixed;
-	top:20px;
-	left:calc(35px + 45%);
-}
-.piocheCardComputer7{
-	position:fixed;
-	top:20px;
-	left:calc(40px + 45%);
-}
-.piocheCardComputer8{
-	position:fixed;
-	top:20px;
-	left:calc(45px + 45%);
-}
-.piocheCardComputer9{
-	position:fixed;
-	top:20px;
-	left:calc(50px + 45%);
-}
-.piocheCardComputer10{
-	position:fixed;
-	top:20px;
-	left:calc(55px + 45%);
+.piocheCardComputer1 {
+	position: fixed;
+	top: 20px;
+	left: calc(10px + 45%);
 }
 
-.player{
-	display:flex;
+.piocheCardComputer2 {
+	position: fixed;
+	top: 20px;
+	left: calc(15px + 45%);
+}
+
+.piocheCardComputer3 {
+	position: fixed;
+	top: 20px;
+	left: calc(20px + 45%);
+}
+
+.piocheCardComputer4 {
+	position: fixed;
+	top: 20px;
+	left: calc(25px + 45%);
+}
+
+.piocheCardComputer5 {
+	position: fixed;
+	top: 20px;
+	left: calc(30px + 45%);
+}
+
+.piocheCardComputer6 {
+	position: fixed;
+	top: 20px;
+	left: calc(35px + 45%);
+}
+
+.piocheCardComputer7 {
+	position: fixed;
+	top: 20px;
+	left: calc(40px + 45%);
+}
+
+.piocheCardComputer8 {
+	position: fixed;
+	top: 20px;
+	left: calc(45px + 45%);
+}
+
+.piocheCardComputer9 {
+	position: fixed;
+	top: 20px;
+	left: calc(50px + 45%);
+}
+
+.piocheCardComputer10 {
+	position: fixed;
+	top: 20px;
+	left: calc(55px + 45%);
+}
+
+.player {
+	display: flex;
 	flex-direction: row;
-	position:fixed;
-	bottom:0;
-	left:0;
-	margin-bottom:20px;
-	width:20vw;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 20px;
+	width: 20vw;
 	align-items: center;
 	justify-content: space-around;
 }
-.playerLife{
-	width:200px;
-	height:29px;
+
+.playerLife {
+	width: 200px;
+	height: 29px;
 	background-color: red;
-	border:1px solid black;
+	border: 1px solid black;
 	text-align: center;
 	font-size: x-large;
 	font-style: italic;
 }
 
-.computer{
-	display:flex;
+.computer {
+	display: flex;
 	flex-direction: row-reverse;
-	position:fixed;
-	top:0;
-	right:0;
-	margin-top:20px;
-	width:20vw;
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-top: 20px;
+	width: 20vw;
 	align-items: center;
 	justify-content: space-around;
 }
-.computerLife{
-	width:200px;
-	height:29px;
+
+.computerLife {
+	width: 200px;
+	height: 29px;
 	background-color: red;
-	border:1px solid black;
+	border: 1px solid black;
 	text-align: center;
 	font-size: x-large;
 	font-style: italic;
-
 }
 
 .song {
 	display: flex;
-	position:fixed;
-	bottom:0;
-	right:0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
 	align-items: center;
 	font-size: 1.1em;
 	font-family: "Roboto";
 }
+
 .pause {
 	margin-left: 0.5em;
-	cursor:pointer;
+	cursor: pointer;
 }
 
-.toShow{
-	color:white;
-	font-size:3rem;
-	visibility:hidden;
-	position:fixed;
-	right:0;
-	top:50;
+.toShow {
+	color: white;
+	font-size: 3rem;
+	visibility: hidden;
+	position: fixed;
+	right: 0;
+	top: 50;
 }
 
-#here:target .toShow{
-	visibility:visible;	
+#here:target .toShow {
+	visibility: visible;
 }
 
-.player img, .computer img{
-	width:150px;
-	height:150px;
+.player img, .computer img {
+	width: 150px;
+	height: 150px;
 }
 
 .boxDescription {
 	border: 1px outset grey;
-	margin-left:740px;
-	width:20%;
-	height:auto;
-	position:fixed;
-	text-align:center;
-	background-color:black;
-	opacity:0.8;
-	bottom:30;
-	right:8%;
-	top:25%;
-	visibility:hidden;
-    opacity: 0;
-    transition: opacity 0.5s;
+	margin-left: 740px;
+	width: 20%;
+	height: auto;
+	position: fixed;
+	text-align: center;
+	background-color: black;
+	opacity: 0.8;
+	bottom: 30;
+	right: 8%;
+	top: 25%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s;
 }
 
 .boxDescription img {
-	width:50%;
-	height:auto;
-	padding:2%;
+	width: 50%;
+	height: auto;
+	padding: 2%;
 }
-.boxDescription h1{
-	color:white;
-	opacity:0.8;
-	text-transform:uppercase;
+
+.boxDescription h1 {
+	color: white;
+	opacity: 0.8;
+	text-transform: uppercase;
 }
 
 .informationTarget {
-	display:flex;
+	display: flex;
 }
 
 .informationTargetcharacteristic {
-	color:#ffff;
-	width:calc(100%/3);
-	font-size:11pt;
+	color: #ffff;
+	width: calc(100%/3);
+	font-size: 11pt;
 	font-weight: bold;
-	text-transform:uppercase;
-	padding:1%;
-	
+	text-transform: uppercase;
+	padding: 1%;
 }
 
 .boxDescriptionText {
-	text-align:left;
+	text-align: left;
 	color: white;
-	padding:5%;
-	opacity:0.9;
+	padding: 5%;
+	opacity: 0.9;
 }
 
 .card1:hover .boxDescription {
-	visibility:visible;
+	visibility: visible;
 	opacity: 1;
 }
 
 .card2:hover .boxDescription {
-	visibility:visible;
+	visibility: visible;
 	opacity: 1;
 }
 
 .card3:hover .boxDescription {
-	visibility:visible;
+	visibility: visible;
 	opacity: 1;
 }
 
 .card4:hover .boxDescription {
-	visibility:visible;
+	visibility: visible;
 	opacity: 1;
 }
 
 .card5:hover .boxDescription {
-	visibility:visible;
+	visibility: visible;
 	opacity: 1;
 }
 
-
 /* card1 */
 
-.pCard{
-	display:flex;
-	position:fixed;
-	right:0;
-	top:40%;
-	flex-direction:column;
-	align-items:center;
-	justify-content:space-between;
-	background-color:rgba(0,0,0,0.6);
-	background-size:cover;
+.pCard {
+	display: flex;
+	position: fixed;
+	right: 0;
+	top: 40%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-size: cover;
 	background-position: 50% 0px;
-	border-radius:20px;
-	width:8vw;
-	height:32vh;
-	z-index:1;
-	visibility:hidden;
-	text-align:center;
-	overflow:hidden;
+	border-radius: 20px;
+	width: 8vw;
+	height: 32vh;
+	z-index: 1;
+	visibility: hidden;
+	text-align: center;
+	overflow: hidden;
 }
-.pCard1{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		
-}
-.pCard2{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 2s;
-}
-.pCard3{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 4s;
-}
-.pCard4{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 6s;
-}
-.pCard5{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 8s;
-}
-.pCard img{
-	width:100%;
 
-	
+.pCard1 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
 }
-.pCard h1{
- font-size:1.5em;
- color:white;
+
+.pCard2 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 2s;
+}
+
+.pCard3 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 4s;
+}
+
+.pCard4 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 6s;
+}
+
+.pCard5 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 8s;
+}
+
+.pCard img {
+	width: 100%;
+}
+
+.pCard h1 {
+	font-size: 1.5em;
+	color: white;
 }
 
 @keyframes slideInFromLeft {
-  0% {
-  	visibility: visible;
-    transform: translateX(+100%);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(0);
-  }
-  70% {
-    transform: translateX(0);
-  }
-  100% {
-  	visibility: hidden;
-    transform: translateX(+100%);
-  }
+	0% {
+		visibility: visible;
+		transform: translateX(+100%);
+	}
+	20% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	70% {
+		transform: translateX(0);
+	}
+	100% {
+		visibility: hidden;
+		transform: translateX(+100%);
+	}
 }
 
-.pCard0{
-	color:white;
-	font-size:2rem;
-	right:5%;
-	top:30%;
-	margin-top:10px;
-	align-self:flex-end;
-	margin-right:10px;
+.pCard0 {
+	color: white;
+	font-size: 2rem;
+	right: 5%;
+	top: 30%;
+	margin-top: 10px;
+	align-self: flex-end;
+	margin-right: 10px;
 	animation: 10s fadeout;
-	visibility:hidden;
+	visibility: hidden;
 }
 
 @keyframes fadeout {
-  0% {
-  	visibility: visible;
-  	transform:translateX(0);
-  }
-  99% {
-  	visibility: visible;
-  	transform:translateX(0);
-  }
-  100% {
-  	transform:translateX(+200%);
-  	display:none;
-  }
+	0% {
+		visibility: visible;
+		transform: translateX(0);
+	}
+	99% {
+		visibility: visible;
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(+200%);
+		display: none;
+	}
 }
 
 /*cp */
 
-
 /* card1 */
 
-.cCard{
-	display:flex;
-	position:fixed;
-	right:0;
-	top:40%;
-	flex-direction:column;
-	align-items:center;
-	justify-content:space-between;
-	background-color:rgba(0,0,0,0.6);
-	background-size:cover;
+.cCard {
+	display: flex;
+	position: fixed;
+	right: 0;
+	top: 40%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-size: cover;
 	background-position: 50% 0px;
-	border-radius:20px;
-	width:8vw;
-	height:32vh;
-	z-index:1;
-	visibility:hidden;
-	text-align:center;
-	overflow:hidden;
-}
-.cCard1{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 10s;
-}
-.cCard2{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 12s;
-}
-.cCard3{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 14s;
-}
-.cCard4{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 16s;
-}
-.cCard5{
-		animation: 2s ease-out 0s 1 slideInFromLeft;
-		animation-delay: 18s;
-}
-.cCard img{
-	width:100%;
-
-	
-}
-.cCard h1{
- font-size:1.5em;
- color:white;
+	border-radius: 20px;
+	width: 8vw;
+	height: 32vh;
+	z-index: 1;
+	visibility: hidden;
+	text-align: center;
+	overflow: hidden;
 }
 
-.cCard0{
-	color:white;
-	font-size:2rem;
-	right:5%;
-	top:30%;
-	align-self:flex-end;
-	margin-top:-10px;
-	margin-right:10px;
+.cCard1 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 10s;
+}
+
+.cCard2 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 12s;
+}
+
+.cCard3 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 14s;
+}
+
+.cCard4 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 16s;
+}
+
+.cCard5 {
+	animation: 2s ease-out 0s 1 slideInFromLeft;
+	animation-delay: 18s;
+}
+
+.cCard img {
+	width: 100%;
+}
+
+.cCard h1 {
+	font-size: 1.5em;
+	color: white;
+}
+
+.cCard0 {
+	color: white;
+	font-size: 2rem;
+	right: 5%;
+	top: 30%;
+	align-self: flex-end;
+	margin-top: -10px;
+	margin-right: 10px;
 	animation: 10s fadeout;
-	animation-delay:10s;
-	visibility:hidden;
+	animation-delay: 10s;
+	visibility: hidden;
 }
 
 .buttonContainer {
@@ -520,10 +542,10 @@ body{
 }
 
 .button {
-	background-color:black;
+	background-color: black;
 	font-size: 12px;
 	text-decoration: none;
-	opacity:0.8;
+	opacity: 0.8;
 	color: white;
 	border: 1px outset grey;
 	margin-bottom: 5px;
@@ -536,11 +558,12 @@ body{
 }
 
 .overCard {
-	width:calc(250px / 2);
-	height:calc(376px / 2);
+	width: calc(250px / 2);
+	height: calc(376px / 2);
 	border-radius: 5px;
 	visibility: visible;
 	z-index: 10;
+
 }
 
 .overCard{
@@ -567,3 +590,4 @@ figcaption{
   	visibility:visible;
   }
 }
+
