@@ -24,6 +24,7 @@ public class HearthOfThon {
     	Card[] playerDeck = new Card[] {globalDeck[0], globalDeck[1], globalDeck[2], globalDeck[3], globalDeck[4], globalDeck[5], globalDeck[6], globalDeck[7], globalDeck[8], globalDeck[9]};
     	for (int i = 0; i < playerDeck.length; i++) {
     		playerDeck[i].setLife(50 + randomVar(20));
+        	System.out.println(playerDeck[i].getLife());
     	}
     	return playerDeck;
     }
