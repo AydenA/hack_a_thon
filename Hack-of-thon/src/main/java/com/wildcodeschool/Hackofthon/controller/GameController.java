@@ -50,18 +50,24 @@ public class GameController {
 		if (computerDeck[Integer.valueOf(idMonster)].getLife() <= 0) {
 			computerDeck[Integer.valueOf(idMonster)] = computerDeck[0];
 		}
+		int invar = 10 + HearthOfThon.randomVar(20);
+		playerLife-=invar;
+		displayMessage2 = "Vous avez subi " + invar + " dégats.";
+		
 		if (playerLife <= 0) {
 			return "defeat";
 		}
 		if (computerLife <= 0) {
 			return "victory";
 		}
+
+		
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
 		model.addAttribute("playerLife",playerLife);
 		model.addAttribute("computerLife",computerLife);
 		model.addAttribute("displayMessage", displayMessage);
-		
+		model.addAttribute("displayMessage2", displayMessage2);
 		
 		
 		
