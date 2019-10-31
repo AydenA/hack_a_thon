@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Night of Terror";
-  src:url('/home/ayden/Hackathon/CFNightofTerrorPERSONAL-Reg.ttf');
+  src:url('CFNightofTerrorPERSONAL-Reg.ttf');
 }
 
 *{
@@ -20,7 +20,7 @@ body{
   flex-wrap:nowrap;
   justify-content: center;
   align-items: center;
-  background: url(plateau.jpg) no-repeat center fixed;
+  background: url(/img/162297.jpg) no-repeat center fixed;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: cover; /* version standardisée */
   font-family: "Night of Terror";
