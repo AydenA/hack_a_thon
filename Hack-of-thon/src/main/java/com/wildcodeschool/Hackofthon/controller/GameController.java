@@ -11,6 +11,11 @@ import com.wildcodeschool.Hackofthon.models.HearthOfThon;
 @Controller
 public class GameController {
 	
+	private static Card[] playerDeck;	
+	private static Card[] computerDeck;
+	private static int playerLife;
+	private static int computerLife;
+	
 	@GetMapping("/") 
 	public String indexController() {
 		
@@ -20,25 +25,25 @@ public class GameController {
 	
 	@GetMapping("/board")
 	public String firstTurnController(Model model) {
-		Card[] playerDeck = HearthOfThon.createPlayerDeck();
-		Card[] computerDeck = HearthOfThon.createComputerDeck();
+		playerDeck = HearthOfThon.createPlayerDeck();
+		computerDeck = HearthOfThon.createComputerDeck();
+		playerLife = HearthOfThon.getPlayerLife();
+		computerLife = HearthOfThon.getComputerLife();
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
-		model.addAttribute("playerLife",HearthOfThon.getPlayerLife());
-		model.addAttribute("computerLife",HearthOfThon.getComputerLife());
+		model.addAttribute("playerLife",playerLife);
+		model.addAttribute("computerLife",computerLife);
 		return "board";
 	}
 	
 	@GetMapping("/board2")
 	public String secondTurnController(Model model, @RequestParam(value="idMonster",
 			required=true) String idMonster) {
-		Card[] playerDeck = HearthOfThon.getPlayerDeck();
-		Card[] computerDeck = HearthOfThon.getComputerDeck();
+		computerLife -= HearthOfThon.takeHit(playerDeck[Integer.valueOf(idMonster)],computerDeck[Integer.valueOf(idMonster)]);
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
-		model.addAttribute("playerLife",HearthOfThon.getPlayerLife());
-		model.addAttribute("computerLife",HearthOfThon.getComputerLife());
-		HearthOfThon.takeHit(playerDeck[1], computerDeck[1]);
+		model.addAttribute("playerLife",playerLife);
+		model.addAttribute("computerLife",computerLife);
 		return "board2";
 	}
 }

@@ -10,7 +10,7 @@
 	</div>
 	<div class = "computer">
 		<img src="/img/cp.png" alt="">
-		<div class = "computerLife">100 PV</div>
+		<div th:text ="|${computerLife} pv|" class="computerLife">100 PV</div>
 	</div>
 	<div class="computerPioche">
 		<div class ="piocheCard piocheCardComputer1"></div>
@@ -147,7 +147,7 @@
 	
 	<div class = "player">
 		<img src="/img/toppng.com-cute-monsters-1024x1024.png" alt="">
-		<div class = "playerLife">100 pv</div>
+		<div th:text ="|${playerLife} pv|" class="playerLife">100 PV</div>
 	</div>
 
 	<a href="#here" class="playerPioche" title="tirer une carte" id="here">

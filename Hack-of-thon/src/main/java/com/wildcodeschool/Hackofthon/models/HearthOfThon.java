@@ -29,16 +29,6 @@ public class HearthOfThon {
     }
     
     
-    public static int getPlayerLife() {
-    	return playerLife;
-    }
-    
-    
-    public static int getComputerLife() {
-    	return computerLife;
-    }
-    
-    
     public static Card[] createComputerDeck () {
     	computerLife = 0;
     	computerDeck = new Card[] {blankCard, globalDeck[10], globalDeck[11], globalDeck[12], globalDeck[13], globalDeck[14], globalDeck[15], globalDeck[16], globalDeck[17], globalDeck[18]};
@@ -48,6 +38,16 @@ public class HearthOfThon {
     		computerLife += lifePoints;
     	}
     	return computerDeck;
+    }
+    
+    
+    public static int getPlayerLife() {
+    	return playerLife;
+    }
+    
+    
+    public static int getComputerLife() {
+    	return computerLife;
     }
     
     
