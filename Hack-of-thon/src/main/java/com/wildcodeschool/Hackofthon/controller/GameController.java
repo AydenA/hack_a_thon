@@ -22,6 +22,8 @@ public class GameController {
 		Card[] computerDeck = HearthOfThon.createComputerDeck();
 		model.addAttribute("playerDeck", playerDeck);
 		model.addAttribute("computerDeck", computerDeck);
+		model.addAttribute("playerLife",HearthOfThon.getPlayerLife());
+		model.addAttribute("computerLife",HearthOfThon.getComputerLife());
 		return "board";
 	}
 	
