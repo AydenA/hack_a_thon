@@ -7,131 +7,82 @@ public class Card {
 	private String level;
 	private int attack;
 	private int defense;
-	private int life = 0;
 	private String special;
 	private String description;
 	private String picture;
+	private String createdAt;
+	private String updatedAt;
+	private int life;
 	
-	
-	public Card(int id, String name, String level, int attack, int defense, int life, String special, String description, String picture) {
-		
-		this.id = id;
-		this.name = name;
-		this.level = level;
-		this.attack = attack;
-		this.defense = defense;
-		this.life = life;
-		this.special = special;
-		this.description = description;
-		this.picture = picture;
-	}
-	
+	public Card() {}
 	
 	public int getId() {
-		
-		return this.id;
+		return id;
 	}
-	
-	
-	public String getName() {
-			
-		return this.name;
-	}
-	
-	
-	public String getLevel() {
-		
-		return this.level;
-	}
-	
-	
-	public int getAttack() {
-		
-		return this.attack;
-	}
-	
-	
-	public int getDefense() {
-		
-		return this.defense;
-	}
-	
-	
-	public int getLife() {
-		
-		return this.life;
-	}
-	
-	
-	public String getSpecial() {
-		
-		return this.special;
-	}
-	
-	
-	public String getDescription() {
-			
-		return this.description;
-	}
-	
-	
-	public String getPicture() {
-		
-		return this.picture;
-	}
-	
-	
 	public void setId(int id) {
-		
 		this.id = id;
 	}
-	
-	
+	public String getName() {
+		return name;
+	}
 	public void setName(String name) {
-		
 		this.name = name;
 	}
-	
-	
+	public String getLevel() {
+		return level;
+	}
 	public void setLevel(String level) {
-		
 		this.level = level;
 	}
-	
-	
+	public int getAttack() {
+		return attack;
+	}
 	public void setAttack(int attack) {
-		
 		this.attack = attack;
 	}
-	
-	
+	public int getDefense() {
+		return defense;
+	}
 	public void setDefense(int defense) {
-		
 		this.defense = defense;
 	}
-	
-	
+	public String getSpecial() {
+		return special;
+	}
+	public void setSpecial(String special) {
+		this.special = special;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public String getPicture() {
+		return picture;
+	}
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+	public String getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
+	}
+	public String getUpdatedAt() {
+		return updatedAt;
+	}
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	public int getLife() {
+		return this.life;
+	}
 	public void setLife(int life) {
-		
 		this.life = life;
 	}
 	
-	public void setSpecial(String special) {
-		
-		this.special = special;
-	}
-	
-	
-	public void setDescription(String description) {
-		
-		this.description = description;
-	}
-	
-	
-	public void setPicture(String picture) {
-		
-		this.picture = picture;
-	}	
-	
+
 }
 

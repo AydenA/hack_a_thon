@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 		
 public class Deck {
 			
-
+		
 		static String url = "https://hackathon-wild-hackoween.herokuapp.com/monsters";
 		
 		public static Card[] createCards() {
