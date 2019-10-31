@@ -11,6 +11,7 @@ import com.wildcodeschool.Hackofthon.models.HearthOfThon;
 @Controller
 public class GameController {
 	
+	private static String displayMessage2;
 	private static String displayMessage;
 	private static Card[] playerDeck;
 	private static Card[] computerDeck;

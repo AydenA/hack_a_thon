@@ -71,14 +71,14 @@ public class HearthOfThon {
     }
 
     
-    private static String displayStatusBattle( boolean battleResult) {
+    public static String displayStatusBattle( boolean battleResult) {
 		if (battleResult)
 			return "Félicitations vous avez remporté la victoire !!";
 		return "Cet Halloween sera votre dernier, vous n'avez pas vu derrière vous la faucheuse qui à eu raison de votre tête !";
 	}
     
 
-    private static String xpGain(double levelJoueur, double levelAdversaire) {
+    public static String xpGain(double levelJoueur, double levelAdversaire) {
         double levelDiff = levelJoueur - levelAdversaire;
         if (levelDiff > 10) {
             return "Vous ne gagnez pas de points d'expérience.";
@@ -112,7 +112,7 @@ public class HearthOfThon {
     }
     
 
-    private static String uprank() {
+    public static String uprank() {
         String rank = ranks[(int) (player1.getExperience() / 10)];
         player1.setRank(rank);
         String result = "Votre rang : " + rank;
@@ -120,12 +120,12 @@ public class HearthOfThon {
     }
     
     
-    private static void xpAdd(double xp) {
+    public static void xpAdd(double xp) {
         player1.setExperience(player1.getExperience() + xp);
     }
     
     
-    private static int randomVar(int variation) {
+    public static int randomVar(int variation) {
         return (int) (Math.random() * variation - (variation / 2));
     }
     
@@ -138,4 +138,5 @@ public class HearthOfThon {
     	return playerDeck;
     	
     }
+   
 }
